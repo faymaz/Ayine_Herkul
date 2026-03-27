@@ -77,4 +77,6 @@ Bu uygulama, **Ayine.tv** Android cihazları için optimize edilmiştir.
 
 [![Ayine.tv](https://img.shields.io/badge/Ayine.tv-Cihaz%20Uyumlu-green)](https://www.ayine.tv)
 
-> [www.ayine.tv](https://www.ayine.tv) — İslami içerik yayın cihazları
+> [www.ayine.tv](https://www.ayine.tv) — Ayine Dijital Çerçeve Ezan Saati
+
+Ayine Dijital Çerçeve namaz vakitlerinde özel seçilmiş ezanlarla ve ilham verici tefekkür levhalarıyla mekanınızı farklılaştıran bir cihazdır.
