@@ -312,6 +312,18 @@ class HomeFragment : Fragment() {
         if (todayPrayer == null || currentCityId != loadedCityId) fetchTodayPrayerTimes()
     }
 
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        if (!hidden) {
+            updateCityCountry()
+            val prefs = requireContext().getSharedPreferences("herkul_prefs", Context.MODE_PRIVATE)
+            val country = Countries.ALL.firstOrNull { it.name == prefs.getString("country_name", Countries.DEFAULT_COUNTRY.name) } ?: Countries.DEFAULT_COUNTRY
+            val cityName = prefs.getString("city_name", null)
+            val currentCityId = (if (cityName != null) country.cities.firstOrNull { it.name == cityName } else country.cities.firstOrNull())?.id ?: -1
+            if (currentCityId != loadedCityId) fetchTodayPrayerTimes()
+        }
+    }
+
     override fun onPause() {
         super.onPause()
         handler.removeCallbacks(clockRunnable)
