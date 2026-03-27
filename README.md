@@ -24,9 +24,9 @@ Diyanet İşleri Başkanlığı'nın resmi sitesinden namaz vakitlerini çeken, 
 ### Radyo
 | İstasyon | Açıklama |
 |---|---|
-| Herkul Radyo | İslami içerik ve müzik |
-| Cihan Radyo | Müzik ve kültür |
-| Sadece Müzik | Türk ve dünya müziği |
+| Herkul Radyo 
+| Cihan Radyo 
+| Sadece Müzik
 
 ### Arayüz
 - Tam ekran (immersive) mod — status bar ve navigation bar gizlenir
@@ -64,39 +64,6 @@ cd herkul
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
----
-
-## Proje Yapısı
-
-```
-app/src/main/java/com/faymaz/herkul/
-├── MainActivity.kt              # Ana activity, fullscreen yönetimi
-├── fragment/
-│   ├── HomeFragment.kt          # Ana ekran (saat, hadis, namaz barı)
-│   ├── PrayerTimesFragment.kt   # Günlük/aylık vakit tablosu
-│   └── RadioFragment.kt         # Radyo akışı (ExoPlayer)
-├── data/
-│   ├── Cities.kt                # 81 il Diyanet ID'leri
-│   ├── RadioStations.kt         # Radyo istasyon listesi
-│   ├── Hadiths.kt               # Hadis koleksiyonu
-│   └── Quotes.kt                # İslami sözler
-└── util/
-    ├── PrayerTimeFetcher.kt     # Diyanet web scraping (Jsoup)
-    └── PrayerTimeCache.kt       # Günlük veri önbelleği
-```
-
----
-
-## Teknoloji
-
-- **Kotlin** — Android geliştirme dili
-- **ExoPlayer** — radyo akışı
-- **Jsoup** — Diyanet HTML scraping
-- **Coroutines** — asenkron işlemler
-- **ViewBinding** — layout bağlama
-- **Material Components** — alt navigasyon çubuğu
-
----
 
 ## İlham Kaynağı
 
