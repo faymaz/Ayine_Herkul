@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Herkul</string>
+    <string name="nav_home">Ana Ekran</string>
+    <string name="nav_prayer_times">Vakitler</string>
+    <string name="nav_radio">Radyo</string>
+    <string name="prayer_imsak">İmsak</string>
+    <string name="prayer_gunes">Güneş</string>
+    <string name="prayer_ogle">Öğle</string>
+    <string name="prayer_ikindi">İkindi</string>
+    <string name="prayer_aksam">Akşam</string>
+    <string name="prayer_yatsi">Yatsı</string>
+    <string name="loading">Yükleniyor...</string>
+    <string name="error_network">Bağlantı hatası. İnternet bağlantınızı kontrol edin.</string>
+    <string name="next_prayer">Sonraki: </string>
+    <string name="daily">Günlük</string>
+    <string name="monthly">Aylık</string>
+    <string name="radio_ready">Hazır</string>
+    <string name="radio_playing">Çalıyor: </string>
+    <string name="radio_stopped">Durdu</string>
+</resources>

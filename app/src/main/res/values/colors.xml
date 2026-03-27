@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme base colors -->
+    <color name="bg_primary">#FF1A1E26</color>
+    <color name="bg_secondary">#FF222832</color>
+    <color name="bg_header">#FF2A303C</color>
+    <color name="bg_table_header">#FF303844</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#FFE6EDF3</color>
+    <color name="text_secondary">#FF8B949E</color>
+    <color name="text_header">#FFC9D1D9</color>
+    <color name="text_accent">#FFFFA500</color>
+
+    <!-- Accent - Islamic green/gold -->
+    <color name="color_accent">#FFFFD700</color>
+    <color name="color_accent_green">#FF2EA043</color>
+
+    <!-- Row highlight -->
+    <color name="bg_today">#FF1F3A2F</color>
+    <color name="bg_normal">#00000000</color>
+
+    <!-- Navigation -->
+    <color name="nav_icon_color">#FF8B949E</color>
+    <color name="nav_text_color">#FF8B949E</color>
+    <color name="nav_selected">#FFFFD700</color>
+
+    <!-- Status bar -->
+    <color name="colorPrimary">#FF2A303C</color>
+    <color name="colorPrimaryVariant">#FF1A1E26</color>
+    <color name="colorOnPrimary">#FFE6EDF3</color>
+    <color name="colorSecondary">#FFFFD700</color>
+    <color name="colorOnSecondary">#FF0D1117</color>
+    <color name="colorSurface">#FF161B22</color>
+    <color name="colorOnSurface">#FFE6EDF3</color>
+</resources>

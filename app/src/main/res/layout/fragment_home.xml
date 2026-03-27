@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_wine">
+
+    <!-- Decorative center image (rotates between home_1..4) -->
+    <ImageView
+        android:id="@+id/ivDecoImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="44dp"
+        android:src="@drawable/home_1"
+        android:scaleType="fitCenter"
+        android:alpha="0.22"
+        android:contentDescription="" />
+
+    <!-- Main content overlay -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Quote area (takes all space above bottom bar) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp">
+
+            <!-- Arabic text (only for hadiths) -->
+            <TextView
+                android:id="@+id/tvArabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFE8C97A"
+                android:textSize="26sp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_marginBottom="10dp"
+                android:shadowColor="#AA000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="8"
+                android:visibility="gone" />
+
+            <!-- Turkish / main quote text -->
+            <TextView
+                android:id="@+id/tvQuote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFFFD27F"
+                android:textSize="28sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.4"
+                android:shadowColor="#AA000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10" />
+
+            <!-- English text (only for hadiths) -->
+            <TextView
+                android:id="@+id/tvEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFAAC8E8"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginTop="8dp"
+                android:shadowColor="#AA000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="4"
+                android:visibility="gone" />
+
+            <!-- Author / narrator -->
+            <TextView
+                android:id="@+id/tvQuoteAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFCC9944"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:shadowColor="#AA000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="6" />
+
+            <!-- Loading / error -->
+            <ProgressBar
+                android:id="@+id/homeProgressBar"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/homeErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFF6B6B"
+                android:textSize="11sp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Bottom bar — Ayine style: clock | date | 6 prayer times -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="#DD000000"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <!-- Current time -->
+            <TextView
+                android:id="@+id/tvClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textColor="#FFFFD700"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:minWidth="72dp" />
+
+            <!-- Separator -->
+            <View android:layout_width="1dp" android:layout_height="24dp"
+                android:background="#55FFFFFF" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+
+            <!-- Date -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvMiladiDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="#FFE6EDF3"
+                    android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/tvHijriDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="#FFCC9944"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Separator -->
+            <View android:layout_width="1dp" android:layout_height="24dp"
+                android:background="#55FFFFFF" android:layout_marginEnd="6dp"/>
+
+            <!-- Prayer times: İmsak -->
+            <LinearLayout android:id="@+id/prayerBarImsak"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:paddingStart="2dp" android:paddingEnd="2dp">
+                <TextView android:id="@+id/barLblImsak" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="İmsak"
+                    android:textColor="#FFAABBD0" android:textSize="11sp"/>
+                <TextView android:id="@+id/barTvImsak" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="--:--"
+                    android:textColor="#FFE6EDF3" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Prayer times: Güneş -->
+            <LinearLayout android:id="@+id/prayerBarGunes"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:paddingStart="2dp" android:paddingEnd="2dp">
+                <TextView android:id="@+id/barLblGunes" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Güneş"
+                    android:textColor="#FFAABBD0" android:textSize="11sp"/>
+                <TextView android:id="@+id/barTvGunes" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="--:--"
+                    android:textColor="#FFE6EDF3" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Prayer times: Öğle -->
+            <LinearLayout android:id="@+id/prayerBarOgle"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:paddingStart="2dp" android:paddingEnd="2dp">
+                <TextView android:id="@+id/barLblOgle" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Öğle"
+                    android:textColor="#FFAABBD0" android:textSize="11sp"/>
+                <TextView android:id="@+id/barTvOgle" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="--:--"
+                    android:textColor="#FFE6EDF3" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Prayer times: İkindi -->
+            <LinearLayout android:id="@+id/prayerBarIkindi"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:paddingStart="2dp" android:paddingEnd="2dp">
+                <TextView android:id="@+id/barLblIkindi" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="İkindi"
+                    android:textColor="#FFAABBD0" android:textSize="11sp"/>
+                <TextView android:id="@+id/barTvIkindi" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="--:--"
+                    android:textColor="#FFE6EDF3" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Prayer times: Akşam -->
+            <LinearLayout android:id="@+id/prayerBarAksam"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:paddingStart="2dp" android:paddingEnd="2dp">
+                <TextView android:id="@+id/barLblAksam" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Akşam"
+                    android:textColor="#FFAABBD0" android:textSize="11sp"/>
+                <TextView android:id="@+id/barTvAksam" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="--:--"
+                    android:textColor="#FFE6EDF3" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Prayer times: Yatsı -->
+            <LinearLayout android:id="@+id/prayerBarYatsi"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical"
+                android:gravity="center" android:paddingStart="2dp" android:paddingEnd="2dp">
+                <TextView android:id="@+id/barLblYatsi" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Yatsı"
+                    android:textColor="#FFAABBD0" android:textSize="11sp"/>
+                <TextView android:id="@+id/barTvYatsi" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="--:--"
+                    android:textColor="#FFE6EDF3" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- City -->
+            <View android:layout_width="1dp" android:layout_height="24dp"
+                android:background="#55FFFFFF" android:layout_marginStart="6dp" android:layout_marginEnd="6dp"/>
+            <TextView
+                android:id="@+id/tvCityCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF8899AA"
+                android:textSize="12sp"
+                android:maxLines="2"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_primary"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Radyo"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Status bar -->
+    <TextView
+        android:id="@+id/tvRadioStatus"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Hazır"
+        android:textColor="@color/text_accent"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:background="@drawable/bg_status_bar"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Station cards -->
+    <LinearLayout
+        android:id="@+id/stationsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</LinearLayout>
