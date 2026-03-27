@@ -1,5 +1,7 @@
 # Herkul — Namaz Vakitleri & Radyo
 
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=faymaz.Ayine_Herkul)
+
 Diyanet İşleri Başkanlığı'nın resmi sitesinden namaz vakitlerini çeken, İslami radyo istasyonlarını yayınlayan Android uygulaması. **Ayine.tv** cihazları için özel olarak tasarlanmıştır.
 
 ![Herkul Ana Ekran](screenshots/screenshot_home.png)
