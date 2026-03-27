@@ -22,11 +22,11 @@ Diyanet İşleri Başkanlığı'nın resmi sitesinden namaz vakitlerini çeken, 
 - Anlık saat
 
 ### Radyo
-| İstasyon | Açıklama |
-|---|---|
-| Herkul Radyo 
-| Cihan Radyo 
-| Sadece Müzik
+| İstasyon |
+|---|
+| Herkul Radyo |
+| Cihan Radyo |
+| Sadece Müzik |
 
 ### Arayüz
 - Tam ekran (immersive) mod — status bar ve navigation bar gizlenir
