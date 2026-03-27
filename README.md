@@ -4,6 +4,10 @@ Diyanet İşleri Başkanlığı'nın resmi sitesinden namaz vakitlerini çeken, 
 
 ![Herkul Ana Ekran](screenshots/screenshot_home.png)
 
+![Herkul Vakit Haftalık](screenshots/screenshot_vakit.png)
+
+![Herkul Radyo](screenshots/screenshot_herkul_radyo.png)
+
 ---
 
 ## Özellikler
