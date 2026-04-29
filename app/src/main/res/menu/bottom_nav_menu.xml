@@ -16,4 +16,9 @@
         android:icon="@drawable/ic_radio"
         android:title="@string/nav_radio" />
 
+    <item
+        android:id="@+id/nav_tv"
+        android:icon="@drawable/ic_tv"
+        android:title="@string/nav_tv" />
+
 </menu>

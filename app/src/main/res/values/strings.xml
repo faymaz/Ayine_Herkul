@@ -18,4 +18,8 @@
     <string name="radio_ready">Hazır</string>
     <string name="radio_playing">Çalıyor: </string>
     <string name="radio_stopped">Durdu</string>
+    <string name="nav_tv">MC Euro TV</string>
+    <string name="tv_loading">Yükleniyor…</string>
+    <string name="tv_error">Bağlantı hatası. Tekrar deneyin.</string>
+    <string name="tv_retry">Tekrar Dene</string>
 </resources>
