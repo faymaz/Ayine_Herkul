@@ -13,7 +13,9 @@ import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.PlaybackException
 import com.google.android.exoplayer2.Player
+import com.google.android.exoplayer2.source.hls.HlsMediaSource
 import com.google.android.exoplayer2.ui.StyledPlayerView
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
 
 class TvFragment : Fragment() {
 
@@ -78,8 +80,10 @@ class TvFragment : Fragment() {
 
     private fun startPlayback() {
         showLoading()
+        val hlsSource = HlsMediaSource.Factory(DefaultHttpDataSource.Factory())
+            .createMediaSource(MediaItem.fromUri(HLS_URL))
         player?.apply {
-            setMediaItem(MediaItem.fromUri(HLS_URL))
+            setMediaSource(hlsSource)
             prepare()
             playWhenReady = true
         }
