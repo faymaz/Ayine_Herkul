@@ -10,6 +10,8 @@ Diyanet İşleri Başkanlığı'nın resmi sitesinden namaz vakitlerini çeken, 
 
 ![Herkul Radyo](screenshots/screenshot_herkul_radyo.png)
 
+![MC Euro TV](screenshots/screenshot_mceuro_tv.png)
+
 ---
 
 ## Özellikler
@@ -27,6 +29,11 @@ Diyanet İşleri Başkanlığı'nın resmi sitesinden namaz vakitlerini çeken, 
 | Herkul Radyo |
 | Cihan Radyo |
 | Sadece Müzik |
+
+### Canlı TV
+| Kanal |
+|---|
+| MC Euro TV |
 
 ### Arayüz
 - Tam ekran (immersive) mod — status bar ve navigation bar gizlenir
