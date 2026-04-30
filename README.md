@@ -12,6 +12,8 @@ Diyanet İşleri Başkanlığı'nın resmi sitesinden namaz vakitlerini çeken, 
 
 ![MC Euro TV](screenshots/screenshot_mceuro_tv.png)
 
+![Hakkında](screenshots/screenshot_about.png)
+
 ---
 
 ## Özellikler

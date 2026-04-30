@@ -6,6 +6,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.faymaz.herkul.databinding.ActivityMainBinding
+import com.faymaz.herkul.fragment.AboutFragment
 import com.faymaz.herkul.fragment.HomeFragment
 import com.faymaz.herkul.fragment.PrayerTimesFragment
 import com.faymaz.herkul.fragment.RadioFragment
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val prayerTimesFragment = PrayerTimesFragment()
     private val radioFragment       = RadioFragment()
     private val tvFragment          = TvFragment()
+    private val aboutFragment       = AboutFragment()
 
     private var activeFragment: Fragment = homeFragment
 
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
                 .add(R.id.fragmentContainer, prayerTimesFragment).hide(prayerTimesFragment)
                 .add(R.id.fragmentContainer, radioFragment).hide(radioFragment)
                 .add(R.id.fragmentContainer, tvFragment).hide(tvFragment)
+                .add(R.id.fragmentContainer, aboutFragment).hide(aboutFragment)
                 .commit()
             binding.bottomNavigation.selectedItemId = R.id.nav_home
         }
@@ -44,6 +47,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_prayer_times -> prayerTimesFragment
                 R.id.nav_radio        -> radioFragment
                 R.id.nav_tv           -> tvFragment
+                R.id.nav_about        -> aboutFragment
                 else -> return@setOnItemSelectedListener false
             }
             if (target !== activeFragment) {
