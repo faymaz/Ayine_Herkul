@@ -1,0 +1,4 @@
+-keep class com.faymaz.herkul.** { *; }
+-keep class org.jsoup.** { *; }
+-dontwarn okhttp3.**
+-dontwarn okio.**
